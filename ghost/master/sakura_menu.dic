@@ -1,0 +1,57 @@
+OnMouseDoubleClick
+{
+	if reference5 == 0 && reference3 == 0
+	{
+		OnSakuraMenu
+	}
+}
+
+OnSakuraMenu : all
+{
+	if BalloonIsOpen && "Conversation will last for" _in_ SHIORI3FW.LastTalk; "\C\![lock,balloonrepaint]\c"
+	
+	if ConversationEnded; "\s[1000]"
+	elseif !SHIORI3FW.IsVisible[0]; OnSurfaceRestore
+	
+	"\0\b[0]\![set,autoscroll,disable]\![no-autopause]\_q"
+	
+	"\![*]\q[Talk,OnAiTalk]"
+	if LastTalk != ""; "  \![*]\q[Repeat dialogue,OnLastTalk]"
+	"\n\n"
+	
+	_times = ("Off,0","1m,60","3m,180","5m,300","10m,600","15m,900")
+	
+	foreach _times; _time
+	{
+		switch TOINT(_time[1]) == aitalkinterval
+		{
+			"\__q[OnTalkRateChange,%(_time[1])]%(_time[0])\__q  "
+			"\f[underline,1]\_a[OnTalkRateChange,%(_time[1])]%(_time[0])\_a\f[underline,default]  "
+		}
+	}
+	
+	"\n"
+	if aitalkinterval <= 0; "(Conversation will only move manually.)"
+	else
+	{
+		"(Conversation will last for ~%(TalkRateLabel(aitalkinterval * 15)) total.)"
+	}
+	"\n\n"
+	
+	if ConversationEnded; "\![*]\__q[OnBoot]Start a new day\__q"
+	else; "\![*]\__q[OnClose]I have to get going.\_w[] Goodbye!\__q"
+	"\n\n"
+	"\![*]\q[Cancel,blank]"
+	"\![unlock,balloonrepaint]"
+}
+
+OnLastTalk
+{
+	LastTalk
+}
+
+OnTalkRateChange
+{
+	aitalkinterval = TOINT(reference0)
+	OnSakuraMenu
+}

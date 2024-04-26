@@ -1,0 +1,9 @@
+it
+{
+	"\f[italic,1]"
+}
+
+itoff
+{
+	"\f[italic,default]"
+}

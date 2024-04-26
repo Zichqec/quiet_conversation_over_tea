@@ -1,0 +1,580 @@
+descript
+{
+	version,1
+	//satolist.palette.offset,90,55
+	//satolist.palette.frame,150,175
+	//satolist.palette.expand,0.75
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+//smile
+//arms laying
+surface0
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+}
+//arms crossed
+surface1
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+}
+
+//head propped
+surface2
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+//holding cup
+surface3
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+}
+
+//talk + blink
+surface.append0-3
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1002,0,0,0
+	animation0.pattern2,overlay,1001,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//happy
+//same order as smile
+surface20
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface100.png,0,0
+}
+
+surface21
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface100.png,0,0
+}
+
+surface22
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface100.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface23
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface100.png,0,0
+}
+
+surface.append20-23
+{
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//soft smile
+surface30
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface211.png,0,0
+}
+
+surface31
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface211.png,0,0
+}
+
+surface32
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface211.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface33
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface211.png,0,0
+}
+
+surface.append30-33
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1002,0,0,0
+	animation0.pattern2,overlay,1001,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//sad
+surface40
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface300.png,0,0
+}
+
+surface41
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface300.png,0,0
+}
+
+surface42
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface300.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface43
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface300.png,0,0
+}
+
+surface.append40-43
+{
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//neutral
+surface50
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface400.png,0,0
+}
+
+surface51
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface400.png,0,0
+}
+
+surface52
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface400.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface53
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface400.png,0,0
+}
+
+surface.append50-53
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,202,0,0,0
+	animation0.pattern2,overlay,201,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//side eyes. happy looks awkward with the mouth and aside already has the side eyes so they're not included
+//smile
+//arms laying
+surface100
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface210.png,0,0
+}
+//arms crossed
+surface101
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface210.png,0,0
+}
+
+//head propped
+surface102
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface210.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+//holding cup
+surface103
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface210.png,0,0
+}
+
+//talk + blink
+surface.append100-103
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,202,0,0,0
+	animation0.pattern2,overlay,201,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+
+//side eyes
+//soft smile
+surface130
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface200.png,0,0
+}
+
+surface131
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface200.png,0,0
+}
+
+surface132
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface200.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface133
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface200.png,0,0
+}
+
+surface.append130-133
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,202,0,0,0
+	animation0.pattern2,overlay,201,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+}
+
+//side eyes
+//sad
+surface140
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface300.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface141
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface300.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface142
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface300.png,0,0
+	element3,overlay,surface210.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface143
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface300.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface.append140-143
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,202,0,0,0
+	animation0.pattern2,overlay,201,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0
+
+	
+}
+//side eyes
+//neutral
+surface150
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface1000.png,0,0
+	element2,overlay,surface400.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface151
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface2000.png,0,0
+	element2,overlay,surface400.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface152
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface3000.png,0,0
+	element2,overlay,surface400.png,0,0
+	element3,overlay,surface210.png,0,0
+
+	animation8.interval,runonce
+	animation8.pattern0,overlay,3100,0,0,0
+}
+
+surface153
+{
+	element0,overlay,surface0.png,0,0
+	element1,overlay,surface4000.png,0,0
+	element2,overlay,surface400.png,0,0
+	element3,overlay,surface210.png,0,0
+}
+
+surface.append150-153
+{
+	//blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,202,0,0,0
+	animation0.pattern2,overlay,201,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+
+	//talk
+	animation1.interval,talk,6
+	animation1.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,1010,0,0,0
+	animation2.pattern1,overlay,1020,200,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1010,0,0,0
+	animation3.pattern1,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1020,0,0,0
+	animation4.pattern2,overlay,-1,200,0,0	
+}
+
+surface1000
+{
+	element0,overlay,surface0.png,0,0
+}
+
+
+surface.append0-153,1000
+{
+	//overlay
+	animation10.interval,runonce
+	animation10.pattern0,overlayfast,9000,0,0,0
+	//animation10.pattern1,overlaymultiply,9001,0,0,0
+	
+}
+
+//Cup
+surface.append0-52,!10,!3,!23,!33,!43,100-152,!103,!123,!133,!143,1000
+{
+    animation9.interval,runonce
+	animation9.pattern0,overlayfast,500,0,0,0
+}
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+
+surface10
+{
+	//collision0,0,0,130,65,head
+	//satolist.palette.visible,0
+}

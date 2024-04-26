@@ -1,0 +1,7 @@
+charset,UTF-8
+type,ghost
+
+name,Quiet conversation over tea
+directory,quiet_conversation_over_tea
+
+balloon.directory,quaint_little_cafe

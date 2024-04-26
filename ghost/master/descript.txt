@@ -1,0 +1,18 @@
+charset,UTF-8
+
+name,Quiet conversation over tea
+type,ghost
+
+shiori,yaya.dll
+
+craftman,BerryOre Rockpunch & Twoaxe Lerns
+craftmanw,BerryOre Rockpunch & Twoaxe Lerns
+
+sakura.name,Tiffany
+kero.name,Tea
+
+balloon,Quaint little café
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0

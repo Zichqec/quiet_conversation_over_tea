@@ -1,0 +1,201 @@
+OnTranslate
+{
+	_talk = reference0
+	
+	//This is what makes %(embedded_elements) work in script input
+	if reference1 == "" && reference2 == "" //If this is from the input box
+	{ //send input box : no event (ref2) , no special flag (ref1)
+		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
+	}
+	
+	TOSTR(_talk)
+}
+
+//Written by Zichqec https://ukagaka.zichqec.com/
+OnTranslateInternal.AutoPause
+{
+	_talk = _argv[0]
+	
+	if "\![no-autopause]" !_in_ _talk
+	{	
+		_talk = REPLACE(_talk,", ",",\w4 ") //Comma
+		_talk = REPLACE(_talk,". ",".\w8\w8 ") //Period
+		_talk = REPLACE(_talk,"? ","?\w8\w8 ") //Question mark
+		_talk = REPLACE(_talk,"! ","!\w8\w8 ") //Exclamation point
+		_talk = REPLACE(_talk,"-- ","--\w8\w8 ") //Dash
+		_talk = REPLACE(_talk,"; ",";\w4 ") //Semicolon
+		_talk = REPLACE(_talk,"\n\n ","\n\n\w8\w8\w8\w8\w8\w8") //Linebreak or character switch
+	}
+	
+	_talk
+}
+
+//Written by Zichqec https://ukagaka.zichqec.com/
+OnSecondChange
+{
+	_since = GETSECCOUNT - SHIORI3FW.TalkEndTime
+	
+	_balloonisopen = "balloon" _in_ status
+	
+	if _since % 15 == 0 && !_balloonisopen
+	{
+		if RAND(4) == 0; OnSurfaceRestore
+	}
+}
+
+OnAnchorSelect
+{
+	if "http://" _in_ reference0 || "https://" _in_ reference0; "\j[""%(reference0)""]"
+}
+
+OnKeyPress
+{
+	if reference0 == "f1"; "\![open,readme]"
+	elseif reference0 == "t"; "\![raise,OnAiTalk]"
+	elseif reference0 == "r"; OnLastTalk
+}
+
+OnSurfaceRestore
+{
+	"\1\s[-1]\0"
+	--
+	if ConversationEnded; "\s[1000]"
+	elseif "\e Sad" _in_ SHIORI3FW.LastAITalk
+	{
+		"\s[40]"
+		"\s[41]"
+		"\s[42]"
+		"\s[43]"
+		"\s[140]"
+		"\s[141]"
+		"\s[142]"
+		"\s[143]"
+		"\s[150]"
+		"\s[151]"
+		"\s[152]"
+		"\s[153]"
+	}
+	else
+	{
+		"\s[0]"
+		"\s[1]"
+		"\s[3]"
+		"\s[100]"
+		"\s[101]"
+		"\s[102]"
+		"\s[103]"
+		"\s[130]"
+		"\s[131]"
+		"\s[132]"
+		"\s[133]"
+	}
+}
+
+OnWindowStateRestore
+{
+	OnSurfaceRestore
+}
+
+ConversationEnded
+{
+	CHAIN.IDName == ""
+}
+
+BalloonIsOpen
+{
+	"balloon" _in_ status
+}
+
+//Written by Zichqec https://ukagaka.zichqec.com/
+TalkRateLabel
+{
+	_num = TOINT(_argv[0])
+	if _num <= 0; {"Off"; return}
+	
+	//Singular form, plural form, number of seconds
+	_units = ( /
+	"hour,hours,3600",/
+	"minute,minutes,60",/
+	"second,seconds,1"/
+	)
+	
+	_output = ""
+	foreach _units; _unit
+	{
+		_duration = TOINT(_unit[2])
+		_amt = _num / _duration
+		_num = _num % _duration
+		
+		if _amt > 0
+		{
+			if _output != ""
+			{
+				if _num == 0
+				{
+					if "," _in_ _output; _output += ","
+					_output += " and "
+				}
+				else; _output += ", "
+			}
+			
+			//The second function call here handles whether the unit name should be displayed as plural or not, depending on if the amount of that unit is greater than 1
+			_output += "%(_amt) %(_unit[_amt > 1])"
+		}
+		if _num <= 0; break
+	}
+	_output
+}
+
+username
+{
+	SHIORI3FW.UserName
+}
+
+//—————————————————————————————— Right click menu links ——————————————————————————————
+/*
+//Takes an array of alternating names and urls, and formats them for use with the right click menu
+FormatLinks : all
+{
+	for _i = 0; _i < ARRAYSIZE(_argv); _i++
+	{
+		_argv[_i] //Add the link/title
+		//Alternate between adding %ASC(1) or %ASC(2)
+		if _i % 2 == 1; "%ASC(2)"
+		else; "%ASC(1)"
+	}
+}
+
+On_sakura.recommendsites
+{
+	FormatLinks(recommendsites_sakura)
+}
+
+//These are the websites linked in the top option of the sakura's right click menu. The format is simple; write the label of the link on the left followed by a semicolon, and then on the right, the url to link to. These should be separate strings.
+recommendsites_sakura : array
+{
+	"Link label";	"https://link.example.com/link/to/whatever/here/"
+}
+
+On_sakura.portalsites 
+{
+	FormatLinks(portalsites_sakura)
+}
+
+//These are the websites linked in the second option of the sakura's right click menu. Same as above
+portalsites_sakura : array
+{
+	"Another link label";	"https://link.example.com/link/to/whatever/here/again/"
+	"A third link label";	"https://link.example.com/link/to/whatever/a/third/time/you/can/add/as/many/as/you/want/"
+}
+
+On_kero.recommendsites
+{
+	FormatLinks(recommendsites_kero)
+}
+
+//These are the websites linked in the first option of the kero's right click menu. Same as above
+recommendsites_kero : array
+{
+	"These labels can be anything you want";	"https://link.example.com/link/to/whatever/here/once/more/"
+}
+*/

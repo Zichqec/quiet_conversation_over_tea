@@ -1,0 +1,96 @@
+OnFirstBoot
+{
+	LastTalk = "\1\s[-1]\0\s[23]\tHey, %(username)! Over here!\n\n \s[20]I'm so glad you made it, I was afraid you'd turn me down! \s[2]How have you been? It's been years since you were in this area, I haven't seen you in ages.\n\n \s[22]Haha, it's always an adventure with you, isn't it? \s[131]You never did know how to keep your nose out of trouble. \s[3]But hey, we have plenty of time. Let's relax and catch up for a while, yeah?\e:chain=catch_up"
+	
+	LastTalk
+}
+
+OnInitialize
+{
+	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading
+	{
+		LastTalk = ""
+	}
+	if reference0 == "reload" //TODO snip these til after
+	{
+		if ISVAR("SavedChain")
+		{
+			CHAIN.IDName = SavedChain[0]
+			CHAIN.Script = SavedChain[1]
+			CHAIN.Index  = SavedChain[2]
+			CHAIN.StartTime = SavedChain[3]
+			ERASEVAR("SavedChain")
+		}
+	}
+}
+
+OnDestroy
+{
+	if reference0 == "reload"
+	{
+		if CHAIN.IDName != ""
+		{
+			SavedChain = IARRAY
+			SavedChain[0] = CHAIN.IDName
+			SavedChain[1] = CHAIN.Script
+			SavedChain[2] = CHAIN.Index
+			SavedChain[3] = CHAIN.StartTime
+		}
+	}
+}
+
+OnBoot
+{
+	LastTalk = "\1\s[-1]\0\s[0]" + BootText
+	LastTalk
+}
+
+BootText : nonoverlap_pool
+{
+	_temp = SHIORI3FW.UserBirthday
+	_user_birthday = "%(_temp[1])/%(_temp[2])" //M/D
+	_today = "%(month)/%(day)"
+	
+	if _today == _user_birthday
+	{
+		"\0\s[22]Hey, %(username)! This way!\n\n \s[2]Hmmm... is it just me, or do you look a little different today? \s[102]Nah... must be my imagination. There's nothing particularly special about today.\n\n \s[21]I'm joking, I'm joking! \s[31]I'd never forget your birthday, %(username)! \s[21]Happy birthday!\e:chain=user_birthday"
+	}
+	// elseif _today == "1/1"
+	// {
+		// ""
+	// }
+	else //Normal boot
+	{
+		"\0\s[22]%(username), you made it! \s[32]I was beginning to wonder where you were, did you get held up in traffic?\n\n \s[103]Well, no matter, you're here now. \s[20]It's good to see you again.\e:chain=jay_moving"
+		"\0\s[103]...\n\n \s[53]Oh-- \s[20]%(username), I didn't see you come in! \s[23]Sit down, sit down, take your coat off. \s[103]It's plenty warm in here, especially with one of the winter specialty drinks.\e:chain=winter_time"
+		"\0\s[1000]\![anim,clear,9].\w8\w8.\w8\w8.\n\n\f[italic,1]%(username)!\f[italic,default]\n\n \s[21]Whoof, sorry I'm running a little late! \s[31]You weren't waiting here long, were you?\n\n \s[33]Oh, yeah, I'm fine! \s[30]Just running a little behind today. \s[130]You know how it is. \s[23]Anyway, what's up? How've you been?\e:chain=ross_invention"
+		"\0\s[20]%(username), over this way! \s[32]Gosh, you're soaked through. Did you forget to bring an umbrella?\n\n \s[21]Ha, yeah, the weather forecast can be unpredictable that way. \s[31]Well, maybe if you take off your coat it'll dry and you can warm up. \s[33]Warm tea should help with that too.\e:chain=spring_time"
+		"\0\s[33]Hey, you made it! \s[23]Good to see you, how have you been?\n\n \s[33]Yeah, we picked a really good day to come out. \s[103]I think the fall leaves are at their peak right now, probably in another week or two the trees will be starting to look bare...\e:chain=fall_time"
+	}
+}
+
+OnClose
+{
+	if ConversationEnded
+	{
+		"\0\s[1000]\f[italic,1]"
+		--
+		"Come back soon!"
+		"Have a nice day!"
+		"Thanks for stopping in!"
+		"Oh, don't forget your keys...!"
+		"Did you enjoy your drink? Be sure to stop by again!"
+		"Appreciate you stopping by, come back soon!"
+		"Have a good one!"
+	}
+	else
+	{
+		"\0\s[50]Oh, you've got to go so soon? \s[100]Well, maybe we'll finish catching up next time, then. \s[0]Still, it was good to see you. Take care!"
+		"\0\s[52]Oh, did something come up? \s[31]Well, I'll let you go then. Maybe I'll text you later. \s[1]Take care, %(username)."
+		"\0\s[53]Hm? You have to get going already? \s[43]Aw, that's a shame. \s[133]There's always next time, though. I'm sure we'll come back here again. \s[0]I'll see you around then, %(username)."
+		"\0\s[51]Ah, is it that time already? \s[141]I thought we'd have a little longer... \s[33]Well, I guess I'll let you go then. Take care out there. And send me a text later when you're free!"
+		"\0\s[52]Oh, it's time for you to get going already? \s[133]Time really does fly when you're having fun, I suppose... \s[3]We'll have to catch up later, then. \s[33]See you around, take care on your way home."
+	}
+	--
+	" \-"
+}
