@@ -12,21 +12,21 @@ descript
 //arms laying
 surface0
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
 }
 //arms crossed
 surface1
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
 }
 
 //head propped
 surface2
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -35,8 +35,8 @@ surface2
 //holding cup
 surface3
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
 }
 
 //talk + blink
@@ -73,23 +73,23 @@ surface.append0-3
 //same order as smile
 surface20
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface100.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_happy.png,0,0
 }
 
 surface21
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface100.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_happy.png,0,0
 }
 
 surface22
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface100.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_happy.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -97,9 +97,9 @@ surface22
 
 surface23
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface100.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_happy.png,0,0
 }
 
 surface.append20-23
@@ -127,23 +127,23 @@ surface.append20-23
 //soft smile
 surface30
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface211.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,mouth_soft_smile.png,0,0
 }
 
 surface31
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface211.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,mouth_soft_smile.png,0,0
 }
 
 surface32
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface211.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,mouth_soft_smile.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -151,9 +151,9 @@ surface32
 
 surface33
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface211.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,mouth_soft_smile.png,0,0
 }
 
 surface.append30-33
@@ -187,23 +187,23 @@ surface.append30-33
 //sad
 surface40
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface300.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_sad.png,0,0
 }
 
 surface41
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface300.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_sad.png,0,0
 }
 
 surface42
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface300.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_sad.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -211,9 +211,9 @@ surface42
 
 surface43
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface300.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_sad.png,0,0
 }
 
 surface.append40-43
@@ -241,23 +241,23 @@ surface.append40-43
 //neutral
 surface50
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface400.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_neutral.png,0,0
 }
 
 surface51
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface400.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_neutral.png,0,0
 }
 
 surface52
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface400.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_neutral.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -265,9 +265,9 @@ surface52
 
 surface53
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface400.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_neutral.png,0,0
 }
 
 surface.append50-53
@@ -303,24 +303,24 @@ surface.append50-53
 //arms laying
 surface100
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,eyes_side.png,0,0
 }
 //arms crossed
 surface101
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,eyes_side.png,0,0
 }
 
 //head propped
 surface102
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,eyes_side.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -329,9 +329,9 @@ surface102
 //holding cup
 surface103
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,eyes_side.png,0,0
 }
 
 //talk + blink
@@ -368,23 +368,23 @@ surface.append100-103
 //soft smile
 surface130
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface200.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_soft_smile.png,0,0
 }
 
 surface131
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface200.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_soft_smile.png,0,0
 }
 
 surface132
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface200.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_soft_smile.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -392,9 +392,9 @@ surface132
 
 surface133
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface200.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_soft_smile.png,0,0
 }
 
 surface.append130-133
@@ -427,26 +427,26 @@ surface.append130-133
 //sad
 surface140
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface300.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_sad.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface141
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface300.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_sad.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface142
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface300.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_sad.png,0,0
+	element3,overlay,eyes_side.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -454,10 +454,10 @@ surface142
 
 surface143
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface300.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_sad.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface.append140-143
@@ -491,26 +491,26 @@ surface.append140-143
 //neutral
 surface150
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface1000.png,0,0
-	element2,overlay,surface400.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_1.png,0,0
+	element2,overlay,face_neutral.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface151
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface2000.png,0,0
-	element2,overlay,surface400.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_2.png,0,0
+	element2,overlay,face_neutral.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface152
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface3000.png,0,0
-	element2,overlay,surface400.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_3.png,0,0
+	element2,overlay,face_neutral.png,0,0
+	element3,overlay,eyes_side.png,0,0
 
 	animation8.interval,runonce
 	animation8.pattern0,overlay,3100,0,0,0
@@ -518,10 +518,10 @@ surface152
 
 surface153
 {
-	element0,overlay,surface0.png,0,0
-	element1,overlay,surface4000.png,0,0
-	element2,overlay,surface400.png,0,0
-	element3,overlay,surface210.png,0,0
+	element0,overlay,background.png,0,0
+	element1,overlay,base_4.png,0,0
+	element2,overlay,face_neutral.png,0,0
+	element3,overlay,eyes_side.png,0,0
 }
 
 surface.append150-153
@@ -552,7 +552,7 @@ surface.append150-153
 
 surface1000
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,background.png,0,0
 }
 
 
