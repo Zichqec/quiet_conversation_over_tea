@@ -11,7 +11,7 @@ craftmanw,BerryOre Rockpunch & Twoaxe Lerns
 sakura.name,Tiffany
 kero.name,Tea
 
-balloon,Quaint little café
+balloon,Quaint Little Café
 
 icon,icon.ico
 
