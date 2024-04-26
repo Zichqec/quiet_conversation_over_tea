@@ -65,7 +65,7 @@ BootText : nonoverlap_pool
 		
 		"\0\s[103]...\n\n \s[53]Oh-- \s[20]%(username), I didn't see you come in! \s[23]Sit down, sit down, take your coat off. \s[103]It's plenty warm in here, especially with one of the winter specialty drinks.\e:chain=winter_time"
 		
-		"\0\s[1000]\![anim,clear,9].\w8\w8.\w8\w8.\n\n\f[italic,1]%(username)!\f[italic,default]\n\n \s[21]Whoof, sorry I'm running a little late! \s[31]You weren't waiting here long, were you?\n\n \s[33]Oh, yeah, I'm fine! \s[30]Just running a little behind today. \s[130]You know how it is. \s[23]Anyway, what's up? How've you been?\e:chain=ross_invention"
+		"\0\s[1000]\![anim,clear,9].\w8\w8.\w8\w8.\n\n \f[italic,1]%(username)!\f[italic,default]\n\n \s[21]Whoof, sorry I'm running a little late! \s[31]You weren't waiting here long, were you?\n\n \s[33]Oh, yeah, I'm fine! \s[30]Just running a little behind today. \s[130]You know how it is. \s[23]Anyway, what's up? How've you been?\e:chain=ross_invention"
 		
 		"\0\s[20]%(username), over this way! \s[32]Gosh, you're soaked through. Did you forget to bring an umbrella?\n\n \s[21]Ha, yeah, the weather forecast can be unpredictable that way. \s[31]Well, maybe if you take off your coat it'll dry and you can warm up. \s[33]Warm tea should help with that too.\e:chain=spring_time"
 		
