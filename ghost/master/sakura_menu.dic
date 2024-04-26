@@ -8,7 +8,7 @@ OnMouseDoubleClick
 
 OnSakuraMenu : all
 {
-	if BalloonIsOpen && "Conversation will last for" _in_ SHIORI3FW.LastTalk; "\C\![lock,balloonrepaint]\c"
+	if BalloonIsOpen && "Talk,OnAiTalk" _in_ SHIORI3FW.LastTalk; "\C\![lock,balloonrepaint]\c"
 	
 	if ConversationEnded; "\s[1000]"
 	elseif !SHIORI3FW.IsVisible[0]; OnSurfaceRestore
