@@ -35,7 +35,7 @@ catch_up
 	"\0\s[143]I hope she's alright, I haven't really seen her around since the diner closed. I heard she moved to be closer to some of her family. \s[43]I guess that's a good thing, but I do miss her.\e Sad"
 	"\0\s[131]Still... even though things are different, there's a lot that's just the same as they used to be. \s[31]You'll see."
 	"\0\s[133]This has been nice. We should do it again sometime. \s[3]Maybe we could make it a regular thing, to keep us in contact, you know?\n\n \s[22]Yeah, it'll be fun to get together for tea once in a while. \s[1]I'll keep you up to date with what's going on at home, and you can tell me all about what's going on in the city. Deal?"
-	"\0\s[133]Well... I guess it's time for me to get going, then. \s[131]I've got some errands to run before I get home. \s[30]I'll text you and we can set a time to meet up again.\n\n \s[20]Haha, that works too, I don't mind if you text me. \s[0]Either way, it was nice to see you, %(username). I'm sure we'll be back here again soon. \w8\w8\s[1000]\e:chain=end"
+	"\![raise,OnFirstBootCompleted]\0\s[133]Well... I guess it's time for me to get going, then. \s[131]I've got some errands to run before I get home. \s[30]I'll text you and we can set a time to meet up again.\n\n \s[20]Haha, that works too, I don't mind if you text me. \s[0]Either way, it was nice to see you, %(username). I'm sure we'll be back here again soon. \w8\w8\s[1000]\e:chain=end"
 }}CHAIN
 
 jay_moving

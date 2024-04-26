@@ -1,8 +1,15 @@
 OnFirstBoot
 {
+	FirstBootCompleted = 0
+	
 	LastTalk = "\1\s[-1]\0\s[23]\tHey, %(username)! Over here!\n\n \s[20]I'm so glad you made it, I was afraid you'd turn me down! \s[2]How have you been? It's been years since you were in this area, I haven't seen you in ages.\n\n \s[22]Haha, it's always an adventure with you, isn't it? \s[131]You never did know how to keep your nose out of trouble. \s[3]But hey, we have plenty of time. Let's relax and catch up for a while, yeah?\e:chain=catch_up"
 	
 	LastTalk
+}
+
+OnFirstBootCompleted
+{
+	FirstBootCompleted = 1
 }
 
 OnInitialize
@@ -41,8 +48,15 @@ OnDestroy
 
 OnBoot
 {
-	LastTalk = "\1\s[-1]\0\s[0]" + BootText
-	LastTalk
+	if !FirstBootCompleted
+	{
+		OnFirstBoot
+	}
+	else
+	{
+		LastTalk = "\1\s[-1]\0\s[0]" + BootText
+		LastTalk
+	}
 }
 
 BootText : nonoverlap_pool
