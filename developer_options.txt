@@ -1,0 +1,4 @@
+.gitignore,nonar,noupdate
+.gitattributes,nonar,noupdate
+quaint_little_cafe/,noupdate
+developer_options.txt,nonar,noupdate
