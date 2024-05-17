@@ -8,6 +8,19 @@ OnTranslate
 		_talk = EVAL('"' + REPLACE(_talk,'"','""') + '"')
 	}
 	
+	if SHIORI3FW.BalloonName == "Quaint Little Café"
+	{
+		if CutesyFont == 1
+		{
+			_talk = REPLACE(_talk,"\n\n","\n\n[half]")
+		}
+		else
+		{
+			_talk = REPLACE(_talk,"\0\b[0]","\0\b[10]")
+			_talk = REPLACE(_talk,"\0\b[2]","\0\b[12]")
+		}
+	}
+	
 	TOSTR(_talk)
 }
 

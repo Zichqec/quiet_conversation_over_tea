@@ -13,7 +13,7 @@ OnSakuraMenu : all
 	if ConversationEnded; "\s[1000]"
 	elseif !SHIORI3FW.IsVisible[0]; OnSurfaceRestore
 	
-	"\0\b[0]\![set,autoscroll,disable]\![no-autopause]\_q"
+	"\0\b[2]\![set,autoscroll,disable]\![no-autopause]\_q"
 	
 	"\![*]\q[Talk,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Repeat dialogue,OnLastTalk]"
@@ -38,10 +38,21 @@ OnSakuraMenu : all
 	}
 	"\n\n"
 	
+	if SHIORI3FW.BalloonName == "Quaint Little Café"
+	{
+		"Font: \f[color,default.anchor]"
+		switch CutesyFont
+		{
+			"\q[Verdana,OnFontToggle]"
+			"\q[Hi Melody,OnFontToggle]"
+		}
+		"\f[color,default]\n\n"
+	}
+	
 	if ConversationEnded; "\![*]\__q[OnBoot]Start a new day\__q"
 	else; "\![*]\__q[OnClose]I have to get going.\_w[] Goodbye!\__q"
 	"\n\n"
-	"\![*]\q[Cancel,blank]"
+	"\![*]\q[Cancel,blank]\_l[]\f[align,right]\f[color,disable]v%(ghostver)"
 	"\![unlock,balloonrepaint]"
 }
 
@@ -53,5 +64,12 @@ OnLastTalk
 OnTalkRateChange
 {
 	aitalkinterval = TOINT(reference0)
+	OnSakuraMenu
+}
+
+OnFontToggle
+{
+	if CutesyFont == 1; CutesyFont = 0
+	else; CutesyFont = 1
 	OnSakuraMenu
 }
