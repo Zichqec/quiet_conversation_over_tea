@@ -5,8 +5,9 @@ type,ghost
 
 shiori,yaya.dll
 
-craftman,BerryOre Rockpunch & Twoaxe Lerns
-craftmanw,BerryOre Rockpunch & Twoaxe Lerns
+craftman,logic.png & Zichqec
+craftmanw,logic.png & Zichqec
+craftmanurl,https://github.com/Zichqec/quiet_conversation_over_tea
 
 sakura.name,Tiffany
 kero.name,Tea
