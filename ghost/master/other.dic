@@ -91,6 +91,12 @@ OnSurfaceRestore
 	}
 }
 
+DefaultSurface
+{
+	if ConversationEnded; "\s[1000]"
+	else; "\s[0]"
+}
+
 OnWindowStateRestore
 {
 	OnSurfaceRestore
